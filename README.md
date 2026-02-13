@@ -1,5 +1,5 @@
 *If no one uses it, I will : might as well make it public...*
-# Heed this : Types should be single words, not whole ass sentences.
+# Heed this : Types should be single words, not whole ass sentences. (no shit)
 
 *Instead of **redefining those every time***,
 **install this file** on your machine **or copy/paste it** in your projects to have ***safe, portable type definitions*** to honor the [spartan](https://www.kernel.org/doc/html/v4.10/process/coding-style.html#naming) langage that C is.
