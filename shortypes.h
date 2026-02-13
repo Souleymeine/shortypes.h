@@ -31,17 +31,17 @@ typedef uint32_t u32;
 typedef uint64_t u64;
 
 #if _MSC_VER
-typedef _int128 i128;
+typedef          _int128 i128;
 typedef unsigned _int128 u128;
 #elif __GNUC__ || __clang__
-typedef __int128 i128;
+typedef          __int128 i128;
 typedef unsigned __int128 u128;
 
-typedef _Float16 f16;
-typedef __float128 f128;
+typedef   _Float16  f16;
+typedef __float128  f128;
 #endif
-typedef float f32;
-typedef double f64;
+typedef float       f32;
+typedef double      f64;
 typedef long double f80;
 
 
