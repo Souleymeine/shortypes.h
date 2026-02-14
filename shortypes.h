@@ -45,6 +45,7 @@ typedef          __int128 i128;
 typedef unsigned __int128 u128;
 #endif
 #endif
+#if __GNUC__ || __clang__
 typedef   _Float16  f16;
 typedef __float128  f128;
 #endif
