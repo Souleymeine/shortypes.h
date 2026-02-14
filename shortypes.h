@@ -4,6 +4,7 @@
 #include <assert.h>
 #include <stddef.h>
 #include <stdint.h>
+#include <uchar.h>
 
 
 // Variable size types
@@ -30,6 +31,10 @@ typedef uint8_t  u8;
 typedef uint16_t u16;
 typedef uint32_t u32;
 typedef uint64_t u64;
+
+typedef char8_t  c8;
+typedef char16_t c16;
+typedef char32_t c32;
 
 #if _MSC_VER
 typedef          _int128 i128;
