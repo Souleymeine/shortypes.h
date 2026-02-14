@@ -36,13 +36,15 @@ typedef char8_t  c8;
 typedef char16_t c16;
 typedef char32_t c32;
 
+#ifdef INT128 // Causes problems if -pedantic is enabled on gcc and clang
 #if _MSC_VER
 typedef          _int128 i128;
 typedef unsigned _int128 u128;
 #elif __GNUC__ || __clang__
 typedef          __int128 i128;
 typedef unsigned __int128 u128;
-
+#endif
+#endif
 typedef   _Float16  f16;
 typedef __float128  f128;
 #endif
@@ -61,8 +63,10 @@ typedef long double f80;
 	static_assert(sizeof(type1) == sizeof(type2), "type " #type1 " has a different size than type " #type2 ", which should be the same.")
 
 #if __GNUC__ || __clang__ || _MSC_VER
+#ifdef INT128
 ASSERT_SIZE_MSG(i128, 16);
 ASSERT_SIZE_MSG(u128, 16);
+#endif
 #if __GNUC__ || __clang__
 ASSERT_SIZE_MSG(f16, 2);
 ASSERT_SIZE_MSG(f128, 16);
